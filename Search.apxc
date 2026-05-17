@@ -1,0 +1,33 @@
+public class Search {
+    public static void main() {
+        List<Integer> arr = new List<Integer>{1, 2, 3, 4, 5};
+
+        System.debug('Array elements are:');
+        for (Integer i : arr) {
+            System.debug(i);
+        }
+
+        // Call search function
+        find(arr, 10);
+        find(arr, 2);
+    }
+
+    // Static method with array passed as parameter
+    public static void find(List<Integer> arr, Integer key) {
+        Boolean found = false;
+        System.debug('Linear Search');
+        System.debug('Searching for ' + key);
+
+        for (Integer i : arr) {
+            if (i == key) {
+                System.debug('KEY FOUND');
+                found = true;
+                break;
+            }
+        }
+
+        if (!found) {
+            System.debug('KEY NOT PRESENT');
+        }
+    }
+}
